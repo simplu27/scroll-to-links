@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scroll to</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="style.css">
+<style>
+	.center {
+		max-width: 600px;
+		margin: 20px auto;
+		padding: 20px;
+		font-family: Arial, sans-serif;
+		font-size: 16px;
+		color: #454545;
+	}
+
+</style>
+</head>
+<body id="top">
+
+<div class="center">
+
+<br>
+<h1>Scroll to links in the same page</h1>
+<a href="http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/">http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/</a>
+<br>
+<hr>
+<br><br>
+	<a href="#link1">Link 1</a>
+	<a href="#link2">Link 2</a>
+	<a href="#link3">Link 3</a>
+	<a href="#link4">Link 4</a>
+	<a href="#link5">Link 5</a>	
+	<a href="#link6">Link 6</a>	
+	<a href="#link7">Link 7</a>	
+
+	<select name="forma" onchange="location = this.options[this.selectedIndex].value;">
+		<option value="#link1">Link 1</option>
+		<option value="#link2">Link 2</option>
+		<option value="#link3">Link 3</option>
+	</select>
+	
+	<div id="link1">
+		<h3>Link 1</h3>
+		<p><a href="#top" id="top">To Top</a></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+	</div>
+
+	<div id="link2">
+		<h3>Link 2</h3>
+		<p><a href="#top" id="top">To Top</a></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+	</div>
+
+	<div id="link3">
+		<h3>Link 3</h3>
+		<p><a href="#top" id="top">To Top</a></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+	</div>
+
+	<div id="link4">
+		<h3>Link 4</h3>
+		<p><a href="#top" id="top">To Top</a></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+	</div>
+
+	<div id="link5">
+		<h3>Link 5</h3>
+		<p><a href="#top" id="top">To Top</a></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+	</div>
+
+	<div id="link6">
+		<h3>Link 6</h3>
+		<p><a href="#top" id="top">To Top</a></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+	</div>
+
+	<div id="link7">
+		<h3>Link 7</h3>
+		<p><a href="#top" id="top">To Top</a></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio officiis, dignissimos vel eaque incidunt sint minus animi praesentium voluptas nulla consectetur fugiat pariatur voluptates nostrum, provident consequuntur eligendi autem doloremque.</p>
+	</div>
+
+</div><!-- center -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+	// http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
+	$('a[href^="#"]').on('click', function(event) {
+	    var target = $( $(this).attr('href') );
+	    if( target.length ) {
+	        event.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: target.offset().top
+	        }, 500);
+	    }
+	});
+</script>
+
+</body>
+</html>
